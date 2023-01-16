@@ -1,0 +1,19 @@
+---
+clickhouse:
+  hosts:
+    clickhouse-1:
+      ansible_host: clickhouse_ip
+  vars:
+    ansible_user: centos
+lighthouse:
+  hosts:
+    lighthouse-1:
+      ansible_host: lighthouse_ip
+  vars:
+    ansible_user: centos
+vector:
+  hosts:
+    vector-1:
+      ansible_host: vector_ip
+  vars:
+    ansible_user: centos

@@ -1,0 +1,11 @@
+[Unit]
+Description=Vector service
+After=network.target
+Requires=network-online.target
+[Service]
+User={{ ansible_user_id }}
+Group={{ ansible_user_gid }}
+ExecStart=/usr/bin/vector --config-yaml vector.yaml --watch-config true
+Restart=always
+[Install]
+WantedBy=multi-user.target
